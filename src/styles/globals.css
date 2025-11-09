@@ -64,5 +64,6 @@
 
   li ul {
     @apply pt-2;
+    list-style-type: '- '; /* 서브 항목을 dash로 표시 */
   }
 }

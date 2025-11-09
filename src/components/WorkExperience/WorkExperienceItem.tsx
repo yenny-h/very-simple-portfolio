@@ -42,8 +42,8 @@ const WorkExperienceItem = ({
       {/* 오른쪽: 마크다운 일반 영역 */}
       <div className="md:border-GRAY_LIGHT md:border-solid md:border-l-[1px] md:pl-4 md:ml-6 markdown w-full">
         <div>
-          <h4>{team}</h4>
-          <blockquote className="whitespace-pre-wrap">{`${description}`}</blockquote>
+          {/* <h4>{team}</h4> */}
+          {/* <blockquote className="whitespace-pre-wrap">{`${description}`}</blockquote> */}
           {/* 마크다운을 이미지 블록별로 분리하여, 각 제목 밑에 갤러리와 텍스트를 표시 */}
           {markdown && (() => {
             // #### 기준으로 분리

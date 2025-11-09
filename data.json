@@ -1,75 +1,47 @@
 {
   "resumeTitle": {
-    "title": "Choi Jin Woo"
+    "title": ""
   },
 
   "information": {
-    "name": "최진우",
+    "name": "홍예은",
     "contact": [
-      { "id": 0, "name": "Email", "href": "newtype0096@naver.com", "isEmail": true },
-      { "id": 1, "name": "Github", "href": "https://github.com/newtype0096" },
-      { "id": 2, "name": "Blog", "href": "https://newtype0096.github.io/" }
+      { "id": 0, "name": "yenny-h@nate.com", "href": "yenny-h@nate.com", "isEmail": true }
     ]
   },
 
   "workExperience": [
     {
       "id": 0,
-      "name": "리얼허브",      
+      "name": "위우너스",      
       "position": "대리",
-      "period": ["2018. 06", "2023. 12"],
-      "team": "개발사업부",
-      "description": "VMS(Video Management System) · 개인영상정보보호 소프트웨어를 개발 및 유지보수했습니다. 공공기관용 NVR 보안 성능품질 TTA Verified 인증을 획득했습니다."
+      "period": ["2015. 02", "2017. 11"],
+      "description": "TODO"
     },
     {
       "id": 1,
-      "name": "한컴인스페이스",      
-      "position": "주임 연구원",
-      "period": ["2023. 12", "2025. 10"],
-      "team": "소프트웨어플랫폼 개발팀 (2025. 03 - )",
-      "description": "IP카메라의 영상정보처리기기 보안기능 확인서 발급을 위한 개발에 참여하고 있습니다. 국가용 보안요구사항에 만족할 수 있도록 소프트웨어 개발을 진행하고 있습니다.",    
-      "team_2": "지상국 개발팀 (2023. 12 - 2025. 03)",
-      "description_2": "WPF 기반의 위성 지상국 소프트웨어를 개발 및 유지보수했습니다. 위성 명령 스크립트 파싱, 실행 및 위성 데이터 동향 시각화 기능을 구현했습니다.",
-      "markdown_2": "#### 위성 수신 데이터 동향 시각화 소프트웨어 개발\n`C#` `WPF` `PostgreSQL` `SciChart`\n- DB를 조회하여 꺾은선 그래프로 데이터 동향 화면 구현\n- 특정한 2가지 데이터 비교 기능 구현\n#### 위성 지상국 운용 소프트웨어 개발 및 유지보수\n`C#` `WPF`\n- 명령 스크립트 구문 단위 파싱 및 인터프리터 방식의 순차 실행 로직 구현\n- 위성 명령 내 아규먼트를 해석하여 패킷 생성 로직 구현\n"
-    }
-  ],
-
-  "project": [
-    {
-      "id": 0,
-      "name": "영상관제 소프트웨어",
-      "description": "NVR과 연동하여 실시간 영상 모니터링 및 저장 영상 검색/재생, 카메라 제어 등을 제공하는 소프트웨어.",
-      "isTeam": true,
-      "stack": ["C++", "MFC", "PostgreSQL"]
-    },
-    {
-      "id": 1,
-      "name": "개인영상정보보호 소프트웨어",
-      "description": "영상 파일을 입력으로 객체를 탐지하여 자동 마스킹(블러, 모자이크) 하거나 정적 객체에 수동 마스킹 처리 등을 제공하는 소프트웨어.",
-      "isTeam": true,
-      "stack": ["C++", "MFC", "BCGControlBar", "OpenCV"]
+      "name": "루키스",      
+      "position": "책임 연구원",
+      "period": ["2018. 09", "2022. 06"],
+      "description": "TODO"
     },
     {
       "id": 2,
-      "name": "영상저장분배 서버",
-      "description": "IP카메라, 비디오 서버와 연동하여 실시간/저장 영상을 클라이언트에게 제공하는 소프트웨어.",
-      "isTeam": true,
-      "stack": ["C++", "ONVIF", "RTSP", "Windows", "Linux"]
+      "name": "리얼허브",      
+      "position": "프리랜서",
+      "period": ["2022. 06", "2023. 06"],
+      "description": "TODO"
     },
     {
       "id": 3,
-      "name": "공공기관용 NVR 보안 성능품질 TTA Verified 인증",
-      "description": "공공기관에서 시스템을 도입할 때 의무적으로 적용되며, TTA에서 제정한 인증 기준에 따라 심사를 통과한 제품에만 부여.",
-      "isTeam": true,
-      "stack": ["C++", "MFC", "SQLite", "ONVIF", "RTSP", "OpenSSL"]
-    },
-    {
-      "id": 4,
-      "name": "위성 지상국 운용 소프트웨어",
-      "description": "위성 Telemetry 수신, 스크립트 및 수동 Telecommand 송신 기능을 제공하는 소프트웨어.",
-      "isTeam": true,
-      "stack": ["C#", "WPF"]
-    }
+      "name": "한컴인스페이스",      
+      "position": "선임 연구원",
+      "period": ["2023. 09", "2025. 02"],
+      "description": "TODO"
+    }        
+  ],
+
+  "project": [
   ],
 
   "activity": [
@@ -90,36 +62,24 @@
   "education": [
     {
       "id": 0,
-      "name": "학점은행제",
-      "period": ["2013. 03", "2017. 02"],
-      "description": "컴퓨터공학 전공"
+      "name": "서정대학",
+      "period": ["2011. 03", "2013. 02"],
+      "description": "인터넷정보"
+    },
+    {
+      "id": 1,
+      "name": "학점은행제 학사대학교",
+      "period": ["2017. 03", "2017. 06"],
+      "description": "정보통신공학"
     }
   ],
 
   "certificate": [
     {
       "id": 0,
-      "name": "네트워크관리사2급",
-      "date": "2013. 11",
-      "organizer": "한국정보통신자격협회"
-    },
-    {
-      "id": 1,
-      "name": "컴퓨터활용능력1급",
-      "date": "2016. 07",
-      "organizer": "대한상공회의소"
-    },
-    {
-      "id": 2,
       "name": "정보처리기사",
-      "date": "2016. 11",
+      "date": "2015. 07",
       "organizer": "한국산업인력공단"
-    },    
-    {
-      "id": 3,
-      "name": "영상정보관리사",
-      "date": "2021. 12",
-      "organizer": "한국정보통신자격협회"
     }
   ],
 

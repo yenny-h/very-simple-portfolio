@@ -7,21 +7,21 @@ import type { AppProps } from "next/app";
  * @description SEO를 위해 본인의 정보로 수정해주세요.
  */
 const DEFAULT_SEO = {
-  title: "최진우 | Application Dev",
-  description: "안녕하세요, 응용소프트웨어 개발자 최진우입니다.",
+  title: "홍예은 | Application Dev",
+  description: "안녕하세요, 응용소프트웨어 개발자 홍예은입니다.",
   canonical: "https://portfolio-tau-virid-88.vercel.app/",
   openGraph: {
     type: "website",
     locale: "ko_KR",
     url: "https://portfolio-tau-virid-88.vercel.app/",
-    title: "최진우 | Application Dev",
-    site_name: "최진우 | Application Dev",
+    title: "홍예은 | Application Dev",
+    site_name: "홍예은 | Application Dev",
     images: [
       {
         url: "https://portfolio-tau-virid-88.vercel.app/share.png",
         width: 285,
         height: 167,
-        alt: "최진우 | Application Dev",
+        alt: "홍예은 | Application Dev",
       },
     ],
   },
@@ -34,11 +34,11 @@ const DEFAULT_SEO = {
   additionalMetaTags: [
     {
       name: "application-name",
-      content: "최진우 | Application Dev",
+      content: "홍예은 | Application Dev",
     },
     {
       name: "msapplication-tooltip",
-      content: "최진우 | Application Dev",
+      content: "홍예은 | Application Dev",
     },
     {
       name: "viewport",
