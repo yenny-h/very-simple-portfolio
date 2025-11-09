@@ -66,9 +66,9 @@ const WorkExperienceItem = ({
               return (
                 <div key={idx} className="mb-6">
                   {titleMatch && <div className="font-bold text-lg"><ReactMarkdown remarkPlugins={[remarkGfm]}>{titleMatch[0]}</ReactMarkdown></div>}
-                  {keywordMatch && <div className="mb-4"><ReactMarkdown remarkPlugins={[remarkGfm]}>{keywordMatch[0]}</ReactMarkdown></div>}
                   {images.length > 0 && <WorkExperienceGallery images={images} />}
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>{textWithoutKeyword}</ReactMarkdown>
+                  {keywordMatch && <div className="mt-4"><ReactMarkdown remarkPlugins={[remarkGfm]}>{keywordMatch[0]}</ReactMarkdown></div>}
                 </div>
               );
             });

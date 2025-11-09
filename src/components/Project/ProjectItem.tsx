@@ -18,30 +18,8 @@ const ProjectItem = ({
   imgSrc,
 }: ProjectProps) => {
   return (
-    <div className="flex flex-col md:flex-row gap-2 md:gap-0">
-      <div className="flex flex-col gap-2">
-        <div className="flex md:flex-col items-center md:items-start mr-4 gap-6 md:sticky md:top-24 md:self-start z-10">
-          {/* {imgSrc && (
-            <Image
-              src={imgSrc}
-              width="200"
-              height="200"
-              alt={name}
-              className="object-cover rounded-lg border-[1px] border-GRAY_LIGHT dark:border-white border-solid w-24 h-24"
-            />
-          )} */}
-          <div className="flex flex-col gap-2">
-            <div className="w-48">
-              <h3>{name}</h3>
-              {/* <div className="flex flex-col">
-                <span>{`${period[0]} - ${period[1]}`}</span>
-              </div> */}
-            </div>
-            {/* <Links repoUrl={repoUrl} webUrl={webUrl} /> */}
-          </div>
-        </div>
-      </div>
-      <div className="md:border-GRAY_LIGHT md:border-solid md:border-l-[1px] md:pl-4 md:ml-6 markdown flex flex-col w-full gap-2">
+    <div className="flex flex-col gap-2">
+      <div className="markdown flex flex-col w-full gap-2">
         <div>
           {/* <blockquote className="whitespace-pre-wrap">{`${description}`}</blockquote> */}
           {/* <div className="flex gap-1 flex-wrap">
@@ -55,25 +33,58 @@ const ProjectItem = ({
             ))}
           </div> */}
         </div>
-        {/* 마크다운에서 이미지 추출 및 갤러리 렌더 */}
-        {markdown && (
-          <>
-            <MarkdownGallery
-              images={
-                Array.from(markdown.matchAll(/!\[(.*?)\]\((.*?)\)/g)).map((m) => ({
-                  alt: m[1],
-                  src: m[2],
-                }))
-              }
-            />
-            {/* 이미지 마크다운 제거 후 텍스트만 렌더 */}
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-            >
-              {markdown.replace(/!\[.*?\]\(.*?\)\s*/g, "")}
-            </ReactMarkdown>
-          </>
-        )}
+        {/* 마크다운 파싱: 제목, 그림, 내용, 기술스택 순서로 표시 */}
+        {markdown && (() => {
+          // 제목 추출 (## 로 시작하는 라인)
+          const titleMatch = markdown.match(/^## .*/m);
+          const titleContent = titleMatch ? titleMatch[0] : "";
+          
+          // 기술스택 추출 (마지막 줄의 백틱으로 감싼 부분)
+          const stackMatch = markdown.match(/`[^`]+`(?:\s+`[^`]+`)*\s*$/);
+          const stackContent = stackMatch ? stackMatch[0] : "";
+          
+          // 이미지 추출
+          const images = Array.from(markdown.matchAll(/!\[(.*?)\]\((.*?)\)/g)).map((m) => ({
+            alt: m[1],
+            src: m[2],
+          }));
+          
+          // 제목, 이미지, 기술스택 제거한 내용
+          let contentOnly = markdown
+            .replace(/^## .*/m, "") // 제목 제거
+            .replace(/!\[.*?\]\(.*?\)\s*/g, "") // 이미지 제거
+            .replace(/`[^`]+`(?:\s+`[^`]+`)*\s*$/, ""); // 기술스택 제거
+          
+          return (
+            <>
+              {/* 1. 제목 */}
+              {titleContent && (
+                <div className="font-bold text-lg mb-2">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {titleContent}
+                  </ReactMarkdown>
+                </div>
+              )}
+              
+              {/* 2. 그림 */}
+              <MarkdownGallery images={images} />
+              
+              {/* 3. 내용 */}
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {contentOnly}
+              </ReactMarkdown>
+              
+              {/* 4. 기술스택 */}
+              {stackContent && (
+                <div className="mt-4">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {stackContent}
+                  </ReactMarkdown>
+                </div>
+              )}
+            </>
+          );
+        })()}
       </div>
     </div>
   );
