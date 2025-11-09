@@ -42,6 +42,27 @@
   ],
 
   "project": [
+    {
+      "id": 0,
+      "name": "SSD Toolbox",
+      "description": "TODO",
+      "isTeam": true,
+      "stack": ["C#", "WPF", "NSIS"]
+    },
+    {
+      "id": 1,
+      "name": "교과/수능 성적 관리",
+      "description": "TODO",
+      "isTeam": true,
+      "stack": ["C#", "WPF", "NSIS", "MariaDB"]
+    },
+    {
+      "id": 2,
+      "name": "판서 애니메이션",
+      "description": "TODO",
+      "isTeam": true,
+      "stack": ["C#", "WPF"]
+    }    
   ],
 
   "activity": [
