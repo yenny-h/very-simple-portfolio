@@ -9,16 +9,16 @@ import type { AppProps } from "next/app";
 const DEFAULT_SEO = {
   title: "홍예은 | Application Dev",
   description: "안녕하세요, 응용소프트웨어 개발자 홍예은입니다.",
-  canonical: "https://portfolio-tau-virid-88.vercel.app/",
+  canonical: "https://portfolio-yenny.vercel.app/",
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://portfolio-tau-virid-88.vercel.app/",
+    url: "https://portfolio-yenny.vercel.app/",
     title: "홍예은 | Application Dev",
     site_name: "홍예은 | Application Dev",
     images: [
       {
-        url: "https://portfolio-tau-virid-88.vercel.app/share.png",
+        url: "https://portfolio-yenny.vercel.app/share.png",
         width: 285,
         height: 167,
         alt: "홍예은 | Application Dev",
